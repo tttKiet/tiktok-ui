@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0 var(--default-layout-hozizontal-spacer);
 }
 
 .logo {
@@ -58,6 +59,19 @@
     &:focus-within {
         border: 1.5px solid rgba(22, 24, 35, 0.2);
     }
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.actions-btn {
+    background-color: transparent;
+    font-size: 2.2rem;
+    color: #161823;
+    padding: 4px 12px;
+    cursor: pointer;
 }
 
 .clear,
@@ -112,4 +126,20 @@
 }
 
 // menu
+// action
+.actions-btn {
+    font-size: 2.2rem;
+    color: #161823;
+    background-color: transparent;
+    padding: 4px 12px;
+    cursor: pointer;
+}
 
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    cursor: pointer;
+}
