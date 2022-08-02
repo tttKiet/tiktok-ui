@@ -5,6 +5,8 @@
     --black: #000;
     --while: #fff;
     --text-color: #161823;
+    --font-family: 'ProximaNova', sans-serif;
+
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
     --default-layout-hozizontal-spacer: 24px;
@@ -25,12 +27,45 @@ html {
 body {
     // font-family: 'Abel', sans-serif;
     // font-family: 'Inter', sans-serif;
-    font-family: 'ProximaNova', sans-serif;
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5rem;
     text-rendering: optimizeSpeed; // toi uu hien tri phong vi phong duoc tai tu mang
+    overflow-y: overlay;
 }
 
+// srollbar
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+//
 button,
 input,
 [tabindex] {

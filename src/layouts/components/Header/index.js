@@ -1,4 +1,5 @@
 import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import images from '~/assets/imgs';
 import Tippy from '@tippyjs/react';
@@ -6,6 +7,8 @@ import 'tippy.js/dist/tippy.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from '~/Components/Images';
 import { MessageIcon, InboxIcon, UploadIcon } from '~/Components/Icons';
+
+import routesConfig from '~/config';
 
 import {
     faCircleQuestion,
@@ -54,6 +57,16 @@ const MENU_ITEMS = [
                     type: 'language',
                     code: 'en',
                     title: 'Phap',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Y',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'Japan',
                 },
             ],
         },
@@ -109,7 +122,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <Link to={routesConfig.routes.home} className={cx('logo-link')}>
+                        <img src={images.logo} alt="Tiktok" />
+                    </Link>
                 </div>
 
                 <Search />
@@ -152,7 +167,7 @@ function Header() {
                             <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/b4f45ab45c999aac225a7322dc33237f~c5_300x300.webp?x-expires=1658973600&x-signature=lVcWZCj5MJ36FiB9JZgd%2F7GdE0E%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/f75993e97bd5424690cb3c702fc88b0d~c5_100x100.jpeg?x-expires=1659578400&x-signature=4mdNOOm3oV26mEBbxZnQrq8kHIQ%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
